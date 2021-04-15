@@ -4,7 +4,7 @@ def tenancy='emeaccoe'
 def ocir='fra.ocir.io'
 def imageTag = "${ocir}/${tenancy}/oracleimc/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
 
-podTemplate { 
+pipeline { 
 	  agent {
     kubernetes {
       label 'people-service-app-build'
